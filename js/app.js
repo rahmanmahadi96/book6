@@ -11,7 +11,7 @@ const searchButton = () => {
 
     if(searchText === ''){
         // searching without inserting any value //
-        booksFound.innerText = "search field can not be empty";
+        booksFound.innerText = "Search field can not be empty";
         searchbooks.textContent = '';
     }
    
