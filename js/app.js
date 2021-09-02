@@ -11,7 +11,7 @@ const searchButton = () => {
 
     if(searchText === ''){
         // searching without inserting any value //
-        booksFound.innerText = "Search field can not be empty";
+        booksFound.innerText = "Search Field Can Not Be Empty";
         searchbooks.textContent = '';
     }
    
@@ -35,7 +35,7 @@ const displayBooks = (books) => {
    
     if(books.length === 0){
         //  no books available with the inserted keyword 
-        booksFound.innerText = 'No result found';
+        booksFound.innerText = 'No Result Found';
     }
     else{
         // number of books found with the inserted keyword 
@@ -44,12 +44,14 @@ const displayBooks = (books) => {
     
     books.forEach(book => {
         // console.log(book);
+        // creating Element 
         const div = document.createElement('div');        
         div.classList.add('col');
+        // elements value insertion 
         div.innerHTML= `
         <div class="card shadow-lg h-100" >
         <div class="card-body">
-        <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="image not found">
+        <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="image Not Found">
         <h5 class="card-title">${book.title}</h5>
                       <p class="card-text">Author Name: ${book.author_name ? book.author_name: "Author Details Not Available"}</p>
                       <p class="card-text">First Publish Year: ${book.first_publish_year ? book.first_publish_year: "Publish Year Details Not Available"}</p>
